@@ -1,9 +1,8 @@
-var wordList = ["here", "are", "some", "example", "words"];
+var wordList = ["here", "rare", "somes", "example", "swords"];
 var magicWord;
 var magicSpace = "_";
-var magicGuess;
+var magicNumber;
 var remainingGuesses;
-var 
 
 // Generating a random word
 var wordGenerator = function () {
@@ -28,7 +27,7 @@ console.log("mysteryArray", mysteryArray);
 
 
 // Creating guess function and working on a loop
-for (var remainingGuesses = 7; remainingGuesses > 0 && mysteryArray !== magicArray; remainingGuesses--) {
+for (var remainingGuesses = 7; remainingGuesses > 0 && mysteryArray.indexOf("_") >= 0; remainingGuesses--) {
 
     console.log("Pre-Guess remainingGuesses", remainingGuesses);
     console.log("mysteryArray", mysteryArray);
@@ -43,27 +42,37 @@ for (var remainingGuesses = 7; remainingGuesses > 0 && mysteryArray !== magicArr
     console.log("magicNumber", magicNumber);
 
     // Identifying if the guess is part of the array
-    // Need to work out how to guess letters if there are duplicates and ensure it finds all of the matches. Thinking doing a for loop using the number of letters in the word as the limit of searches, creating a new variable that counts those searches, and doing indexOf() starting at magicNumber + 1.
+    // Need to work out how to guess letters *if there are duplicates* and ensure it finds all of the matches. Thinking doing a for loop using the number of letters in the word as the limit of searches, creating a new variable that counts those searches, and doing indexOf() starting at magicNumber + 1.
     var letterCheck = function () {
         if (magicNumber >= 0) {
-            console.log(magicArray[magicNumber]);
-            remainingGuesses = remainingGuesses + 1;
-            console.log("Post-Guess remainingGuesses", remainingGuesses);
-            mysteryArray[magicNumber] = magicArray[magicNumber];
+            for (var checkLoop = magicArray.length - 1; checkLoop >= 0; checkLoop--){
+                console.log("checkLoop", checkLoop);
+                console.log("letter", magicArray[checkLoop])
+                if (magicArray[checkLoop] === magicArray[magicNumber]){
+                    console.log("successful check", checkLoop);
+                    mysteryArray[checkLoop] = magicArray[checkLoop];
+                }
+                else {
+                    console.log("fail check ", checkLoop);
+                }
+            }
+            if (mysteryArray.indexOf("_") >= 0) {
+                remainingGuesses = remainingGuesses + 1;
+                console.log("Correct Guess. Remaining Guesses", remainingGuesses);
+            }
+            else {
+                console.log("You win.");
+            }
         }
         else {
-            console.log("Post-Guess remainingGuesses", remainingGuesses);
+            if (remainingGuesses > 1){
+                console.log("Wrong Guess. Remaining Guesses: ", remainingGuesses);
+            }
+            else {
+                console.log("You lose.");
+            }
         }
     }
 
     letterCheck();
 }
-
-
-
-
-
-
-
-
-magicGuess = magicArray[letterGuess()];
