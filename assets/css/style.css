@@ -1,0 +1,70 @@
+body {
+    width: 100%;
+    background-image: url("../images/nyc-skyline.jpg");
+    font-family: Helvetica;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-align: left;
+    font-style: bold;
+    font-weight: bold;
+}
+
+#mysteryWord {
+    background: rgba(255, 255, 255, 0.877);
+    color: #222;
+    font-size: 75px;
+    font-weight: bold;
+    padding: 0 20px;
+    border: 1px solid #222;
+}
+
+.counter {
+    margin-top: 10px;
+}
+
+#visibleGuesses {
+    background: rgba(255, 255, 255, 0.877);
+    color: #222;
+    font-size: 30px;
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #222;
+}
+
+.titleContainer {
+    margin-top: 15px;
+}
+
+.headerText {
+    background: rgba(255, 255, 255, 0.877);
+    color: #222;
+    font-size: 70px;
+    display: inline;
+    border: 1px 1px 1px 0 solid #222;
+}
+
+#SNL {
+    background: rgba(255, 255, 255, 0.877);
+    color: rgb(7, 7, 202);
+    font-size: 70px;
+    font-weight: bold;
+    display: inline;
+    border: 1px 0 1px 1px solid #222;
+}
+
+.liveText {
+    width: 100%;
+    margin: 30% 0;
+}

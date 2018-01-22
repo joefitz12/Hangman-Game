@@ -1,4 +1,4 @@
-var wordList = ["here", "rare", "somes", "example", "swords"];
+var wordList = ["murray","belushi","murphy","hartman","ferrell","aykroyd","farley","fey","meyers","carvey","radner","poehler","wiig","hader","fallon","rock"];
 var magicWord = "";
 var magicSpace = "_";
 var magicNumber;
@@ -48,7 +48,7 @@ var magicProgress = function () {
 }
 
 visibleText.innerText = magicProgress();
-visibleGuesses.innerText = remainingGuesses;
+visibleGuesses.innerText = "Press any letter key to begin guessing!";
 
 // Creating guess function and working on a loop
 var magicRound = function(event){
@@ -112,7 +112,7 @@ var magicRound = function(event){
         visibleText.innerText = magicProgress();
         console.log("visibleText", visibleText);
 
-        visibleGuesses.innerText = remainingGuesses;
+        visibleGuesses.innerText = "Remaining Guesses: " + remainingGuesses;
 
     }
 }
