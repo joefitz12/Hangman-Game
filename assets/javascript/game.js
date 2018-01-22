@@ -8,6 +8,8 @@ var magicArray = "";
 var remainingGuesses = 7;
 var visibleText = document.querySelector("#mysteryWord");
 var visibleGuesses = document.querySelector("#visibleGuesses");
+var visibleWins = document.querySelector("#wins");
+var wins = 0;
 
 
 
@@ -93,6 +95,8 @@ var magicRound = function(event){
                 else {
                     console.log("mysteryArray", mysteryArray);
                     console.log("You win.");
+                    wins++;
+                    visibleWins.innerText = "Wins: " + wins;
                 }
             }
             else {
