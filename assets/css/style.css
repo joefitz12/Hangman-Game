@@ -10,6 +10,11 @@ body {
     position: relative;
 }
 
+.container-fluid {
+    height: 100%;
+    position: relative;
+}
+
 h1 {
     text-align: center;
     text-transform: uppercase;
@@ -80,6 +85,28 @@ h2 {
     border-right: none;
 }
 
-.liveText {
-    width: 100%;
+footer {
+    position: fixed;
+    bottom: 15px;
+}
+
+#wrongGuesses {
+    background: rgba(255, 255, 255, 0.877);
+    color: #222;
+    font-size: 30px;
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #222;
+}
+
+.hidden {
+    display: none;
+}
+
+.answer {
+    background: rgba(255, 255, 255, 0.877);
+    color: #222;
+    height: 200px;
+    position: absolute;
+    right: 0;
 }
