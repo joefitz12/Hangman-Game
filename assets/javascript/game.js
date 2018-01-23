@@ -1,4 +1,4 @@
-var wordList = ["here", "rare", "somes", "example", "swords"];
+var wordList = ["murray","belushi","murphy","hartman","ferrell","aykroyd","farley","fey","meyers","carvey","radner","poehler","wiig","hader","fallon","rock"];
 var magicWord = "";
 var magicSpace = "_";
 var magicNumber;
@@ -8,6 +8,12 @@ var magicArray = "";
 var remainingGuesses = 7;
 var visibleText = document.querySelector("#mysteryWord");
 var visibleGuesses = document.querySelector("#visibleGuesses");
+var visibleWins = document.querySelector("#wins");
+var wrongBank = document.querySelector("#wrongGuesses");
+var answerBox = document.querySelector(".answer");
+var wrongArray = [];
+var wins = 0;
+var letterRecord = "";
 
 
 
@@ -48,7 +54,7 @@ var magicProgress = function () {
 }
 
 visibleText.innerText = magicProgress();
-visibleGuesses.innerText = remainingGuesses;
+visibleGuesses.innerText = "Press any letter key to begin guessing!";
 
 // Creating guess function and working on a loop
 var magicRound = function(event){
@@ -57,11 +63,11 @@ var magicRound = function(event){
 
         console.log("Pre-Guess remainingGuesses", remainingGuesses);
         console.log("mysteryArray", mysteryArray);
+
+        var magicLetter = event.key;
     
         // Need to update letterGuess to include eventListener
         var letterGuess = function () {
-            var magicLetter = event.key;
-            console.log("magicLetter", magicLetter);
             var magicNumber = magicArray.indexOf(magicLetter);
             console.log("magicNumber"),magicArray.magicLetter;
             console.log("magicNumber", magicNumber);
@@ -93,10 +99,14 @@ var magicRound = function(event){
                 else {
                     console.log("mysteryArray", mysteryArray);
                     console.log("You win.");
+                    wins++;
+                    visibleWins.innerText = "Wins: " + wins;
                 }
             }
             else {
                 // Check to see if they've lost. If not, loop back around.
+                wrongArray.push(magicLetter);
+                wrongBank.innerText = "Wrong Guesses: " + wrongArray.join(", ");
                 if (remainingGuesses > 1) {
                     remainingGuesses--;
                     console.log("Wrong Guess. Remaining Guesses: ", remainingGuesses);
@@ -112,9 +122,49 @@ var magicRound = function(event){
         visibleText.innerText = magicProgress();
         console.log("visibleText", visibleText);
 
-        visibleGuesses.innerText = remainingGuesses;
-
+        visibleGuesses.innerText = "Remaining Guesses: " + remainingGuesses;
+    }
+    else {
+        answerBox.classList.remove("hidden");
     }
 }
 
 document.addEventListener("keyup", magicRound);
+
+var answers = {
+    murray: {bio: "later went on to star in ghostbusters", headshot: "placeholder image"},
+    belushi: "",
+    murphy: "",
+    hartman: "",
+    ferrell: "",
+    aykroyd: "",
+    farley: "",
+    fey: "",
+    meyers: "",
+    carvey: "",
+    radner: "",
+    poehler: "",
+    wiig: "",
+    hader: "",
+    fallon: "",
+    rock: ""
+    }
+
+var headshot = {
+    murray: "later went on to star in ghostbusters",
+    belushi: "",
+    murphy: "",
+    hartman: "",
+    ferrell: "",
+    aykroyd: "",
+    farley: "",
+    fey: "",
+    meyers: "",
+    carvey: "",
+    radner: "",
+    poehler: "",
+    wiig: "",
+    hader: "",
+    fallon: "",
+    rock: ""
+    }

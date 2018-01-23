@@ -3,19 +3,81 @@
 
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
+        crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    <title>SNL Hangman</title>
+
 </head>
 
 <body>
 
-    <h1>
-        <span id="mysteryWord"></span>
-    </h1>
+    <div class="container-fluid">
 
-    <h2>
-        <span id="visibleGuesses"></span>
-    </h2>
+        <div class="row">
+
+            <div class="titleContainer col-md-6">
+                <h1 id="SNL">SNL</h1><h1 class="headerText">Hangman</h1>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="guessCounter col-md-7">
+                <h2>
+                    <span id="visibleGuesses">Remaining Guesses:</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="winCounter col-md-3">
+                <h3>
+                    <span id="wins">Wins: 0</span>
+                </h3>
+            </div>
+        </div>
+        
+    
+
+    </div>
+
+    <div class="container">
+
+        <div class="row answer hidden">
+            <div class="col-md-3 col-md-offset-6">
+                <div class="row">
+                    <span id="headshot"></span>
+                </div>
+                <div class="row">
+                    <h2>
+                        <span id="bio">Test Test Test</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="liveText">
+                    <span id="mysteryWord"></span>
+                </h1>
+            </div>
+        </div>  
+
+
+
+    </div> 
+
+    <div class="container-fluid">
+
+        <footer>
+            <h2>
+                <span id="wrongGuesses">Wrong Guesses: </span>
+            </h2>
+        </footer>
+
+    </div> 
 
 </body>
 
