@@ -104,9 +104,22 @@ footer {
 }
 
 .answer {
+    position: absolute;
+    top: -40px;
+}
+
+.profile {
     background: rgba(255, 255, 255, 0.877);
     color: #222;
-    height: 200px;
-    position: absolute;
-    right: 0;
+    z-index: 10;
+    border: 1px solid #222;
+}
+
+img {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.info {
+    padding: 10px 0;
 }
