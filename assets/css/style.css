@@ -21,45 +21,13 @@ h1 {
 }
 
 h2 {
-    text-align: left;
     font-style: bold;
     font-weight: bold;
 }
 
-#mysteryWord {
-    background: rgba(255, 255, 255, 0.877);
-    color: #222;
-    font-size: 75px;
-    font-weight: bold;
-    padding: 0 20px;
-    border: 1px solid #222;
-}
-
-.guessCounter {
-    margin-top: 10px;
-}
-
-
-#visibleGuesses {
-    background: rgba(255, 255, 255, 0.877);
-    color: #222;
-    font-size: 30px;
-    margin-top: 15px;
-    padding: 15px;
-    border: 1px solid #222;
-}
-
-.winCounter {
-    margin-top: 15px;
-}
-
-#wins {
-    background: rgba(255, 255, 255, 0.877);
-    color: #222;
-    font-size: 30px;
-    margin-top: 15px;
-    padding: 15px;
-    border: 1px solid #222;
+.center {
+    margin: 0 auto;
+    text-align: center;
 }
 
 .titleContainer {
@@ -85,6 +53,42 @@ h2 {
     border-right: none;
 }
 
+.guessCounter {
+    margin-top: 10px;
+}
+
+#visibleGuesses {
+    background: rgba(255, 255, 255, 0.877);
+    color: #222;
+    font-size: 30px;
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #222;
+    text-align: left;
+}
+
+.winCounter {
+    margin-top: 15px;
+}
+
+#wins {
+    background: rgba(255, 255, 255, 0.877);
+    color: #222;
+    font-size: 30px;
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #222;
+}
+
+#mysteryWord {
+    background: rgba(255, 255, 255, 0.877);
+    color: #222;
+    font-size: 75px;
+    font-weight: bold;
+    padding: 0 20px;
+    border: 1px solid #222;
+}
+
 footer {
     position: fixed;
     bottom: 15px;
@@ -97,6 +101,7 @@ footer {
     margin-top: 15px;
     padding: 15px;
     border: 1px solid #222;
+    text-align: left;
 }
 
 .hidden {
@@ -113,6 +118,17 @@ footer {
     color: #222;
     z-index: 10;
     border: 1px solid #222;
+}
+
+#hint {
+    background: rgba(255, 255, 255, 0.877);
+    color: #222;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px;
+    border: 1px solid #222;
+    position: absolute;
+    top: -70px;
 }
 
 img {
