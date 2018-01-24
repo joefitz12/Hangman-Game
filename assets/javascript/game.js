@@ -91,7 +91,6 @@ var magicRound = function(event){
 
         var magicLetter = event.key;
     
-        // Need to update letterGuess to include eventListener
         var letterGuess = function () {
             var magicNumber = magicArray.indexOf(magicLetter);
             return magicNumber;
